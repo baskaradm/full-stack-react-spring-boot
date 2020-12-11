@@ -1,30 +1,22 @@
 import React, {Component} from "react";
 import './App.css';
+import FirstComponent from './components/learning-examples/FirstComponent'
 
 class App extends Component {
   render() {
-   return (
-    <div className="App">
+   return <div className="App">
       My Hello World!
       <FirstComponent />
       <SecondComponent />
       <ThirdComponent />
       <FourthComponent></FourthComponent>
     </div>
-  );
+  ;
  }
 }
 
 
-class FirstComponent extends Component {
-  render() {
-   return (
-    <div className="firstComponent">
-      FirstComponent
-    </div>
-  );
- }
-}
+
 
 class SecondComponent extends Component {
   render() {
