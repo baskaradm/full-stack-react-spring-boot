@@ -9,6 +9,7 @@ class App extends Component {
       <FirstComponent />
       <SecondComponent />
       <ThirdComponent />
+      <FourthComponent></FourthComponent>
     </div>
   );
  }
@@ -39,6 +40,15 @@ function ThirdComponent() {
   return  (
     <div className="thirdComponent">
        ThirdComponent
+    </div>
+  );
+}
+
+function FourthComponent() {
+
+  return (
+    <div className="fourthComponent">
+        FourthComponent
     </div>
   );
 }
