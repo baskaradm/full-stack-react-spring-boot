@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import './App.css';
-import FirstComponent from './components/learning-examples/FirstComponent'
+import FirstComponent, {SecondComponent} from './components/learning-examples/FirstComponent'
 
 class App extends Component {
   render() {
@@ -12,19 +12,6 @@ class App extends Component {
       <FourthComponent></FourthComponent>
     </div>
   ;
- }
-}
-
-
-
-
-class SecondComponent extends Component {
-  render() {
-   return (
-    <div className="secondComponent">
-      SecondComponent
-    </div>
-  );
  }
 }
 
