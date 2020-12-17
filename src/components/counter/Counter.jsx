@@ -11,19 +11,20 @@ class Counter extends Component {
     };
     //If we want use this in method in react js we must bind this
     //to inncrement method in class
-    this.increment = this.increment.bind(this);
+    //this.increment = this.increment.bind(this);
   }
-
-  render() {
+  //When you use arrow function you don't need to binding this variable
+  //because this is binding automatically
+  render = () => {
     return (
       <div className="counter">
         <button onClick={this.increment}>+1</button>
         <span className="count">{this.state.counter}</span>
       </div>
     );
-  }
+  };
 
-  increment() {
+  increment = () => {
     //Update state - counter++
     //console.log("increment");
 
@@ -34,7 +35,7 @@ class Counter extends Component {
     this.setState({
       counter: this.state.counter + 1,
     });
-  }
+  };
 }
 
 export default Counter;
