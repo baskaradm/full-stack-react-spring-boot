@@ -8,7 +8,12 @@ import Counter from "./components/counter/Counter";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div
+        style={{
+          backgroundColor: "yellow",
+        }}
+        className="App"
+      >
         <Counter />
       </div>
     );
