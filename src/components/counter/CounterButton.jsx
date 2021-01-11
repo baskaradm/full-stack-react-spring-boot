@@ -19,21 +19,14 @@ class CounterButton extends Component {
     return (
       <div className="counter">
         <button onClick={this.increment}>+{this.props.by}</button>
-        <span className="count">{this.state.counter}</span>
       </div>
     );
   }
   increment() {
-    //Update state - counter++
-    //console.log("increment");
-
-    //If we want use this in method in  react js we must bind this
-    //to inncrement method in class
-
-    //update state via setState not directly this.state.counter++;Bad practice
     this.setState({
       counter: this.state.counter + this.props.by,
     });
+    this.props.incrementMethod(this.props.by);
   }
 }
 CounterButton.defaultProps = {
