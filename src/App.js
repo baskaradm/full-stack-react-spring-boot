@@ -9,9 +9,9 @@ class App extends Component {
   render() {
     return (
       <div
-        style={{
+        /* style={{
           backgroundColor: "yellow",
-        }}
+        }}*/
         className="App"
       >
         <Counter />
