@@ -12,6 +12,7 @@ class CounterButton extends Component {
     //If we want use this in method in react js we must bind this
     //to inncrement method in class
     this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
   }
   //When you use arrow function you don't need to binding this variable
   //because this is binding automatically
@@ -19,6 +20,7 @@ class CounterButton extends Component {
     return (
       <div className="counter">
         <button onClick={this.increment}>+{this.props.by}</button>
+        <button onClick={this.decrement}>-{this.props.by}</button>
       </div>
     );
   }
@@ -27,6 +29,12 @@ class CounterButton extends Component {
       return { counter: prevState.counter + this.props.by };
     });
     this.props.incrementMethod(this.props.by);
+  }
+  decrement() {
+    this.setState((prevState) => {
+      return { counter: prevState.counter - this.props.by };
+    });
+    this.props.decrementMethod(this.props.by);
   }
 }
 CounterButton.defaultProps = {
