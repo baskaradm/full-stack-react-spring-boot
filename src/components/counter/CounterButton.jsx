@@ -23,8 +23,8 @@ class CounterButton extends Component {
     );
   }
   increment() {
-    this.setState({
-      counter: this.state.counter + this.props.by,
+    this.setState((prevState) => {
+      return { counter: prevState.counter + this.props.by };
     });
     this.props.incrementMethod(this.props.by);
   }
